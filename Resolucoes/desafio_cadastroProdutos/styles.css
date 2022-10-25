@@ -1,0 +1,43 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@200;500&display=swap');
+
+
+*,
+*::before,
+*::after  {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Outfit', sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+
+    margin: 30px;
+}
+
+#table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 30px;
+    font-weight: 500;
+}
+#table thead {
+    background-color: rgb(55, 1, 93);
+    text-align: left;
+    font-weight: 500;
+}
+
+#table tr:nth-child(even){
+    background-color: silver;
+}
+
+#table tbody tr:hover {
+    background-color: aqua;
+}
+
+th {
+    padding-block: 5px;
+    color: white;
+}

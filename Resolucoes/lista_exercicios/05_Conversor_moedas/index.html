@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <script defer src="./script.js"></script>
+    <link rel="stylesheet" href="./styles.css">
+    <title>Conversor de Moedas</title>
+</head>
+<body>
+  <main class="container">
+        <h1>Conversor de Moedas</h1>
+        <form class="form" id="form"> 
+            <label class="form__label" for="valor">Valor a ser convertido</label>
+            <input 
+            class="valor"
+            id="valor"
+            name="valor"
+            type="number"
+            placeholder="Insira o valor"
+            />
+            
+            <fieldset class="form__fieldset">
+                <legend>Conversões</legend>
+                <div class="metodo" id="from_currency"></div>
+                <div class="metodo" id="to_currency"></div>     
+            </fieldset>
+
+            <span id="valor-final"></span>
+
+            <button id="submit-btn" class="form__btn" onclick="calculate()">Converter</button>
+        </form>
+  </main>
+</body>
+</html>

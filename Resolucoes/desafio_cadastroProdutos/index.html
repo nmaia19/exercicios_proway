@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <script defer src="./script.js"></script>
+    <link rel="stylesheet" href="./styles.css">
+    
+    <title>Tabela de Produtos</title>
+</head>
+<body>
+
+    <div class="container">
+        <div class="block">
+            <h2 class="block__title">Controle de produtos</h2>
+            <input
+                type="text"
+                class="block__search"
+                placeholder="Filtrar produtos"
+            >
+
+            <div class="block__add">
+                <input
+                    type="text"
+                    class="input__produto"
+                    placeholder="Nome do produto"
+                    ref="input-name"
+                >
+                <input
+                    type="text"
+                    class="input__preco"
+                    placeholder="Preço do produto"
+                    ref="input-preco"
+                >
+                <input
+                    type="number"
+                    class="input__estoque"
+                    placeholder="Estoque do produto"
+                    ref="input-estoque"
+                >
+                <select id="unidades-select" class="unidades" name="unidades">
+                    <option value="KG">Kilo</option>
+                    <option value="M">Metro</option>
+                    <option value="L">Litro</option>
+                </select>
+
+                <button
+                    type="button"
+                    class="btn"
+                    id="btn__add"
+                    >
+                    <!-- @click="addProduto()"  -->
+                    Adicionar produto
+                </button>
+                
+            </div>
+
+        </div>
+    </div>
+
+    <table id="table">
+        <thead>
+            <tr>
+                <th>Produto</th>
+                <th>Preco</th>
+                <th>Estoque</th>
+                <th>Unidade</th>
+            </tr>
+        </thead>
+        <tbody id="table__body">
+            <!-- <tr>
+                <td>1</td>
+                <td>Ana da Silva</td>
+                <td>anasilva@gmail.com</td>
+                <td>(19)9-9998-4898</td>
+            </tr> -->
+            <!-- <tr>
+                <td>2</td>
+                <td>Zeh</td>
+                <td>zeh@gmail.com</td>
+                <td>(19)9-9998-1234</td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>Rubens</td>
+                <td>rubens@gmail.com</td>
+                <td>(19)9-9998-4321</td>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>Ana da Silva</td>
+                <td>anasilva@gmail.com</td>
+                <td>(19)9-9998-4898</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>Zeh</td>
+                <td>zeh@gmail.com</td>
+                <td>(19)9-9998-1234</td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>Rubens</td>
+                <td>rubens@gmail.com</td>
+                <td>(19)9-9998-4321</td>
+            </tr> -->
+        </tbody>
+    </table>
+</body>
+</html>

@@ -8,6 +8,7 @@ const users = JSON.parse(localStorage.getItem('users'))
 
 console.log(users);
 
+
 function storeUserData() {
   var newEmail = document.getElementById("email").value;
   var password = document.getElementById("password").value;
@@ -28,30 +29,6 @@ function storeUserData() {
 
   localStorage.setItem("users", JSON.stringify(tempUsers));
 
-  // VALIDAÇÕES POSTERIORES
-
-  // var lowerCaseLetters = /[a-z]/g;
-  // var upperCaseLetters = /[A-Z]/g;
-  // var numbers = /[0-9]/g;
-  // if (newEmail.value.length == 0) {
-  //   alert("Please fill in email");
-  // } else if (password.value.length == 0) {
-  //   alert("Please fill in password");
-  // } else if (newEmail.value.length == 0 && password.value.length == 0) {
-  //   alert("Please fill in email and password");
-  // } else if (password.value.length > 8) {
-  //   alert("Max of 8");
-  // } else if (!password.value.match(numbers)) {
-  //   alert("please add 1 number");
-  // } else if (!password.value.match(upperCaseLetters)) {
-  //   alert("please add 1 uppercase letter");
-  // } else if (!password.value.match(lowerCaseLetters)) {
-  //   alert("please add 1 lovercase letter");
-  // } else {
-  //   localStorage.setItem("name", newEmail.value);
-  //   localStorage.setItem("password", password.value);
-  //   alert("Your account has been created");
-  // }
 }
 
 
@@ -63,20 +40,20 @@ function login() {
   var userName = document.getElementById("userEmail");
   var userPw = document.getElementById("userPassword");
 
-  console.log(userName.value, userPw.value);
-
   if (autenticar(userName.value, userPw.value)) {
     tentativas = 0
     alert("Logou!");
   } else {
     tentativas++
+    console.log(tentativas);
     if (tentativas == 3) {
       document.getElementById('login_btn').disabled = true
       setTimeout(() => {
         document.getElementById('login_btn').disabled = false
-        tentativas = 0
       }, 5000)
-      alert("Erro no login");
+      tentativas = 0
+      // alert("Erro no login");
+      console.log("erro no login");
     }
   }
 }

@@ -83,6 +83,11 @@ p {
   cursor: pointer;
   transition: 0.3s ease-in-out;
 }
-#login form input[type="submit"]:hover {
+
+.login form input[type="submit"]:hover {
   background: #16aa56;
+}
+
+#login_btn .disabled {
+  background: #babbbc;
 }

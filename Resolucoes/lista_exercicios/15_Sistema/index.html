@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign-in</title>
+    <link rel="stylesheet" href="./styles/styles.css">
+    <script defer src="./scripts/script.js"></script>
+</head>
+<body>
+    
+    <div class="login">
+        <form id="form-login" name='form-login'>
+    
+            <h1>SIGN IN</h1>
+    
+            <label for="userEmail">Email</label>
+            <input type="email" id="userEmail" placeholder="Seu email" required>
+    
+            <label for="userPassword">Password</label>
+            <input type="password" id= "userPassword" placeholder="Password" required>
+    
+            <!-- <div id="remember">
+                <input type="checkbox" value="lsRememberMe" id="rememberMe" style="display: inline-block;">
+                <label>Remember me</label>
+            </div> -->
+    
+            <input id= "login_btn" type="submit" value="Login" onclick="login()">
+    
+        </form>
+        <a href="signup.html">Ir para página de registro</a>
+    </div>
+    
+</body>
+</html>
